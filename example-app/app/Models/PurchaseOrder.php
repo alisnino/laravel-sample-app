@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class PurchaseOrder extends Model
 {
-    protected $fillable = ['user_id', 'product_id', 'shipper_id', 'quantity'];
+    protected $fillable = ['user_id', 'shipper_id', 'order_date'];
 
     public function user()
     {
