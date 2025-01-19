@@ -20,6 +20,7 @@ return new class extends Migration
         });
 
         Schema::table('purchase_orders', function (Blueprint $table) {
+            $table->dropForeign('purchase_orders_product_id_foreign'); // Drop the foreign key constraint
             $table->dropColumn('product_id');  // Drop the product_id column if it exists
             $table->dropColumn('quantity');  // Drop the quantity column if it exists
         });
