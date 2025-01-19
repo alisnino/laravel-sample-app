@@ -17,10 +17,10 @@ ENV COMPOSER_ALLOW_SUPERUSER 1
 ENV COMPOSER_HOME /composer
 ENV PATH $PATH:/composer/vendor/bin
 
-# Set working directory
-WORKDIR /var/www
-
 RUN composer global require "laravel/installer"
+
+# Set working directory
+WORKDIR /var/www/example-app
 
 # Expose the port for artisan serve
 EXPOSE 8000
